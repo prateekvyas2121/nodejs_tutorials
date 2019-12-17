@@ -39,6 +39,6 @@ const writeStream = fs.createWriteStream('./example1.txt.gz');
 //NOW WE'LL DO THE REVERSE OF WHAT WE JUST DID ...IT MEANS WE'LL UNZIPP THE FILE(SOURCE) AND WRITE IT TO THE SOME FILE(DESTINATION).... 
 
 const gunzip = zlib.createGunzip() ;//this will return the unzipped string..
-const readStream = fs.createReadStream('./example1.txt','utf8');
+const readStream = fs.createReadStream('./example1.txt.gz');
 const writeStream = fs.createWriteStream('./example.txt');
-readStream.pipe(gzip).pipe(writeStream);
+readStream.pipe(gunzip).pipe(writeStream);
