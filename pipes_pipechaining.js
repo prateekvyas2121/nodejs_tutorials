@@ -31,8 +31,8 @@ const zlib = require('zlib');//this module is basically for compression of files
 //now we're gonna create a transformed stream..transformed stream basically takes the input from for eg.  readStream  and when it recieves the data it manipulates the data into something else....
 const gzip = zlib.createGzip() ;//this will return the tranformed string..
 
-const readStream = fs.createReadStream('./example.txt','utf8');
-const writeStream = fs.createWriteStream('./example1.txt.gz');
+// const readStream = fs.createReadStream('./example.txt','utf8');
+// const writeStream = fs.createWriteStream('./example1.txt.gz');
 
 // readStream.pipe(gzip).pipe(writeStream);//this is pipe chaining...in this we compressed the file and piped it to the example1.txt.gz....
 
@@ -40,5 +40,5 @@ const writeStream = fs.createWriteStream('./example1.txt.gz');
 
 const gunzip = zlib.createGunzip() ;//this will return the unzipped string..
 const readStream = fs.createReadStream('./example1.txt.gz');
-const writeStream = fs.createWriteStream('./example.txt');
+const writeStream = fs.createWriteStream('./uncompressed.txt');
 readStream.pipe(gunzip).pipe(writeStream);
