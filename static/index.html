@@ -1,5 +1,5 @@
-<!-- //html for get_started_express....page 
-start -->
+<!-- html for get_started_express....page  -->
+<!--start -->
 <!-- <html lang="en">
 <head>
 	<title>hi</title>
@@ -26,29 +26,49 @@ start -->
     <title>Hello, world!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
-	<form method="POST" action="/">
-		<div class="form-group">
-			<label for="exampleInputEmail1">Email address</label>
-			<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-		</div>
-		<div class="form-group">
-			<label for="exampleInputPassword1">Password</label>
-			<input type="password" class="form-control" id="exampleInputPassword1">
-		</div>
-		<div class="form-group form-check">
-			<input type="checkbox" class="form-check-input" id="exampleCheck1">
-			<label class="form-check-label" for="exampleCheck1">Check me out</label>
-		</div>
-		<button type="submit" class="btn btn-primary">Submit</button>
-	</form>
+  	<div class="container">
+	    <h1>Hello, world!</h1>
+	    <!-- i am giving id "form" to this form because i want to prevent the default submission of form ... i will submit it using jquery ajax.... -->
+		<form method="POST" action="/" id="form">
+			<div class="form-group">
+				<label for="exampleInputEmail1">Email address</label>
+				<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+				<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputPassword1">Password</label>
+				<input type="password" name="password" class="form-control" id="exampleInputPassword1">
+			</div>
+			<div class="form-group form-check">
+				<input type="checkbox" class="form-check-input" id="exampleCheck1">
+				<label class="form-check-label" for="exampleCheck1">Check me out</label>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+    	// $(document).ready(() => {
+    	// 	$('#form').submit((e) => {
+    	// 		e.preventDefault();
+    	// 		$.ajax({
+    	// 			url: '/',
+    	// 			type: 'post',//we'll post json to the server....
+    	// 			contentType: 'application/json',
+    	// 			data: JSON.stringify($('#form').serializeArray()),//we want to post json so we convert javascript object to json..
+    	// 			success : (response) => {
+    	// 				console.log("successfully recieved respone !!!!");
+    	// 				console.log(response);
+    	// 			}
+    	// 		});
+    	// 	});
+    	// });
+    </script>
   </body>
 </html>
 <!-- end -->

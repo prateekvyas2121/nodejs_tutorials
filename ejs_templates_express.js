@@ -1,0 +1,1 @@
+//EJS is template language and that's going to allow us to write more dynamic web pages so now we have our static "index2.html" file
